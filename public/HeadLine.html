@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="HeadLine.css">
+</head>
+
+<body>
+    <div id="head">
+        <h1> HEADLINE SYNDROME </h1>
+        <div id="news"> </div>
+        <button id="gethedline"> Headline of Today </button>
+    </div>
+
+    <script>
+        $("#gethedline").click(function(event) {
+            event.preventDefault();
+            var url = "news/"
+            //   console.log(url);
+            $.getJSON(url, function(data) {
+                //   console.log(data);
+                var headline = data.articles[Math.floor(Math.random() * data.articles.length)];
+                console.log(headline);
+                var HeadLine;
+                HeadLine = "";
+                if (!((headline.title == null) || (headline.title == ""))){
+                    HeadLine += "<div id='title'>" + headline.title + "</div>";
+                }
+                
+                if (!((headline.source.name == null) || (headline.source.name == ""))) {
+                    HeadLine += "<br><text id='source'>" + headline.source.name + "</text>";
+                }
+                
+                if (!((headline.author == null) || (headline.author == ""))) {
+                    HeadLine += "<br><text id='author'>" + headline.author + "</text>";
+                }
+                
+                if (!((headline.urlToImage == null) || (headline.urlToImage == ""))){
+                    HeadLine += "<div id='pictureblock'>" + "<a href = '"+ headline.url + "'>" + "<img id='image' src='"+ headline.urlToImage + "'></a>";
+                    HeadLine += "<br> click the image for the news </div>";
+                }
+                else{
+                    HeadLine += "<div id='pictureblock'>" + "<a href = '"+ headline.url + "'>" + "<img id='image' src='"+ "https://vollrath.com/ClientCss/images/VollrathImages/No_Image_Available.jpg" + "'></a>";
+                    HeadLine += "<br> click the image for the news </div>";
+                }
+                
+                if (!((headline.description == null) || (headline.description == ""))){
+                    HeadLine += "<text id='dsc'> Description: <br>" + headline.description + "</text>";
+                }
+                $("#news").html(HeadLine);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+#head{
+    margin: auto;
+    width: 80%;
+}
+
+#news{
+    margin: auto;
+    width: 80%;
+}
+
+text{
+    color: white;
+    
+}
+
+html{
+    background-color: black;
+}
+
+h1 {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    
+    color:white;
+    background-color: #c94c4c;
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    
+    font-size: 40px;
+}
+
+button{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 400px;
+    height: 100px;
+    
+    background-color: #80ced6; /* Green */
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 15px 32px;
+    font-size: 30px;
+    outline:none;
+    
+}
+
+img{
+    display:block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 70%;
+}
+
+#title{
+    display:block;
+    margin: 0 auto;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Trocchi';
+    font-size: 30px;
+    width: 90%;
+}
+
+#msg{
+    display:block;
+    margin: 0 auto;
+    color: white;
+}
+
+#news{
+    margin-bottom: 30px;
+}
+
+#source{
+    margin-left: 12.5%;
+    font-size: 20px;
+}
+
+#author{
+    margin-left: 12.5%;
+    font-size: 15px;
+}
+
+#pictureblock{
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+#dsc{
+    width: 85%;
+    display:block;
+    margin: 0 auto;
+    color:white;
+}
